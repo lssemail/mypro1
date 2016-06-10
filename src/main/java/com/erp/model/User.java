@@ -1,15 +1,15 @@
 package com.erp.model;
 
-/**
- * Created by shuai on 2016/4/16.
- */
 public class User {
-
     private Integer id;
 
     private String username;
 
     private String password;
+
+    private String telephone;
+
+    private Integer status;
 
     public Integer getId() {
         return id;
@@ -24,7 +24,7 @@ public class User {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username = username == null ? null : username.trim();
     }
 
     public String getPassword() {
@@ -32,6 +32,22 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone == null ? null : telephone.trim();
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }
